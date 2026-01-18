@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useCart } from "@/components/cart/cart-store";
 
-const WHATSAPP_NUMBER = "910000000000"; // <-- replace with real number
+const WHATSAPP_NUMBER = "7017569620";
 
 export default function OrderPage() {
   const { items, total, setQty, remove, clear } = useCart();
