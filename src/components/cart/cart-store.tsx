@@ -41,7 +41,9 @@ export function useCart() {
     setItems(getCache());
     const listener = (next: CartItem[]) => setItems(next);
     listeners.add(listener);
-    return () => listeners.delete(listener);
+    return () => {
+      listeners.delete(listener);
+    };
   }, []);
 
   const count = useMemo(() => items.reduce((a, x) => a + x.qty, 0), [items]);
